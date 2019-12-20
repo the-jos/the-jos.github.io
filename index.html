@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    </head>
+<body>
+<div class="container">
+        <main role="main" class="pb-3">
+<div class="text-center">
+    <h1 class="display-4">R.O.A.C.H.</h1>
+    <p>Roaming Ochtend Alarm Clock from Hell</p>
+</div>
+<form>
+    <fieldset id="fields" disabled>
+        <h2>Alarm</h2>
+        <h4>Status: <span id="alarmstate"></span><span id="remainingtime"></span></h4>
+        <div class="form-group">
+            <label for="datum">Datum</label><input class="form-control" id="datum" name="datum" type="date" required/>
+        </div>
+        <div class="form-group">
+            <label for="tijd">Tijd</label><input class="form-control" id="tijd" name="tijd" type="time" required/>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" id="armed" name="armed" type="checkbox"/><label class="form-check-label" for="armed">Alarm aan</label>
+        </div>
+        <button id="submitbutton" type="button" class="btn btn-primary">Opslaan</button><span id="result"></span>
+    </fieldset>
+</form>
+<div id="loading"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        </main>
+    </div>
+     <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - Roach
+        </div>
+    </footer>
+</body>
+</html>
