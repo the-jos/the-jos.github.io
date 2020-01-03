@@ -48,8 +48,8 @@ function submitAlarm() {
         var alarmdate = inputs[0].valueAsDate;
         var hours = inputs[1].valueAsDate.getHours();
         var minutes = inputs[1].valueAsDate.getMinutes();
-        // alarmdate.setHours(hours - 1);
-        alarmdate.setUTCHours(hours.getUTCHours() - 1)
+        alarmdate.setHours(hours - 1);
+        // alarmdate.setUTCHours(hours.getUTCHours() - 1)
         alarmdate.setMinutes(minutes);
         alarmdate.setSeconds(00);
 
