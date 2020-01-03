@@ -52,7 +52,8 @@ function submitAlarm() {
         alarmdate.setMinutes(minutes);
         alarmdate.setSeconds(00);
 
-        var dif = alarmdate.getTime() - new Date().getTime();
+        var timeNow = new Date();
+        var dif = alarmdate.getTime() - timeNow.getTime();
         var secondsFromT1ToT2 = dif / 1000;
         var secondsBetweenDates = Math.floor(secondsFromT1ToT2);
         if (secondsBetweenDates < 1) {
