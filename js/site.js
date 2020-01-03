@@ -53,6 +53,7 @@ function submitAlarm() {
         alarmdate.setHours(alarmdate.getHours() - 1);
         alarmdate.setMinutes(minutes);
         alarmdate.setSeconds(00);
+        alarmdate.setDate(alarmdate.getDate() + 1);
 
         var timeNow = new Date();
         var dif = alarmdate.getTime() - timeNow.getTime();
